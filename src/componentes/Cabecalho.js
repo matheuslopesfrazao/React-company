@@ -2,7 +2,8 @@ import React from 'react'
 
 const Cabecalho = props => {
     return (
-        <nav className='navbar navbar-default navbar-fixed-top'>
+        <div>
+            <nav className='navbar navbar-default navbar-fixed-top'>
                 <div className='container'>
                     <div className='navbar-header'>
                         <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
@@ -23,6 +24,7 @@ const Cabecalho = props => {
                     </div>
                 </div>
             </nav>
+        </div>
     );
 }
 
