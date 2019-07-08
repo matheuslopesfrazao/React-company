@@ -5,7 +5,7 @@ const Servicos = props => {
         <div>
             {/* Container (Services Section) */}
             <div id='services' className='container-fluid text-center'>
-                <h2>SERVICES</h2>
+                <h2>SERVIÇOS</h2>
                 <h4>What we offer</h4>
                 <br />
                 <div className='row '>
