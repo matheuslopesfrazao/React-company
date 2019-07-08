@@ -19,7 +19,7 @@ const Cabecalho = props => {
                             <li><Link to="/">INICIO</Link></li>
                             <li><Link to="/servicos">SERVIÇOS</Link></li>
                             <li><Link to='/portfolio'>PORTFOLIO</Link></li>
-                            <li><a href='#pricing'>PRICING</a></li>
+                            <li><Link to='/preco'>PREÇO</Link></li>
                             <li><a href='#contact'>CONTACT</a></li>
                         </ul>
                     </div>
