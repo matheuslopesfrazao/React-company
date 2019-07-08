@@ -17,8 +17,8 @@ const Cabecalho = props => {
                     <div className='collapse navbar-collapse' id='myNavbar'>
                         <ul className='nav navbar-nav navbar-right'>
                             <li><Link to="/">INICIO</Link></li>
-                            <li><Link to="/Servicos">SERVIÇOS</Link></li>
-                            <li><a href='#portfolio'>PORTFOLIO</a></li>
+                            <li><Link to="/servicos">SERVIÇOS</Link></li>
+                            <li><Link to='/portfolio'>PORTFOLIO</Link></li>
                             <li><a href='#pricing'>PRICING</a></li>
                             <li><a href='#contact'>CONTACT</a></li>
                         </ul>
