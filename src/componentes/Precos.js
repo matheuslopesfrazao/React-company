@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Preco = props => {
+const Precos = props => {
     return (
         <div id='pricing' className='container-fluid'>
             <div className='text-center'>
-                <h2>Pricing</h2>
+                <h2>Preços</h2>
                 <h4>Choose a payment plan that works for you</h4>
             </div>
             <div className='row '>
@@ -70,4 +70,4 @@ const Preco = props => {
     );
 }
 
-export default Preco
+export default Precos
