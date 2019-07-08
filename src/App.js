@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import Cabecalho from './componentes/Cabecalho'
 import Inicio from './componentes/Inicio'
@@ -9,15 +10,17 @@ import Rodape from './componentes/Rodape'
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Cabecalho />
-        <Inicio />
-        <Servicos />
-        <Site />
-        <Rodape />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Cabecalho />
+          <Route path="/" exact component={Inicio} /> {/* o "exact" quer dizer que essa rota só vai ser ativada, se o link for exatamente "/" */}
+          <Route path="/servicos" component={Servicos} />
+          <Servicos />
+          <Rodape />
+        </div>
+      </BrowserRouter>
     );
-  }  
+  }
 }
 
 export default App;
