@@ -6,6 +6,7 @@ import Inicio from './componentes/Inicio'
 import Servicos from './componentes/Servicos'
 import Portfolio from './componentes/Portfolio'
 import Precos from './componentes/Precos'
+import Contatos from './componentes/Contatos'
 import Site from './site'
 import Rodape from './componentes/Rodape'
 
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/servicos" component={Servicos} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/precos" component={Precos} />
+          <Route path="/contatos" component={Contatos} />
           <Rodape />
         </div>
       </BrowserRouter>
