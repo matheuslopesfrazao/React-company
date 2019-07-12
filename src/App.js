@@ -10,6 +10,10 @@ import Contatos from './componentes/Contatos'
 import Site from './site'
 import Rodape from './componentes/Rodape'
 
+/* Area Administrativa */
+import Admin from './admin/Admin'
+
+
 class App extends Component {
   render() {
     return (
@@ -21,6 +25,7 @@ class App extends Component {
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/precos" component={Precos} />
           <Route path="/contatos" component={Contatos} />
+          <Route path="/admin" component={Admin} />
           <Rodape />
         </div>
       </BrowserRouter>
