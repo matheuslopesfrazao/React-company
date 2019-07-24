@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import ItemPortfolio from './ItemPortfolio'
 import config from './../firebase-config'
 
 class Portfolio extends Component {
@@ -7,11 +7,17 @@ class Portfolio extends Component {
         super(props)
 
         this.state = {
-            portfolio:{
-                titulo: 'Paris',
-                descricao: 'Cidade luz',
+            portfolio: {
+                
             }
         }
+
+        //O bloco de código abaixo serve para sincronizar o componente Portfolio ao Firebase
+        config.syncState('portfolio', {
+            context: this,
+            state: 'portfolio',
+            asArray: false
+        })
     }
 
     render() {
@@ -22,13 +28,14 @@ class Portfolio extends Component {
                     <h2>Portfolio</h2><br />
                     <h4>What we have created</h4>
                     <div className='row text-center '>
-                        <div className='col-sm-4'>
-                            <div className='thumbnail'>
-                                <img src='paris.jpg' alt='Paris' width='400' height='300' />
-                                <p><strong>{this.state.portfolio.titulo}</strong></p>
-                                <p>{this.state.portfolio.descricao}</p>
-                            </div>
-                        </div>
+
+                    {
+                        Object.keys(this.state.portfolio)
+                        .map(key => {
+                            return <ItemPortfolio key={key} conteudo={this.state.portfolio[key]}  />
+                        })
+                    }
+
                     </div><br />
 
                     <h2>What our customers say</h2>
