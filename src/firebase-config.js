@@ -6,7 +6,7 @@ const FirebaseConfig = {
     authDomain: "xumes-portfolio-eaeman.firebaseapp.com",
     databaseURL: "https://xumes-portfolio-eaeman.firebaseio.com",
     projectId: "xumes-portfolio-eaeman",
-    storageBucket: "",
+    storageBucket: "gs://xumes-portfolio-eaeman.appspot.com/",
     messagingSenderId: "309263854842",
     appId: "1:309263854842:web:87d45f7db93a80bf"
   } // Esse bloco de código acima serve para fazer a leitura dos dados que estão no firebase 
@@ -15,5 +15,7 @@ const FirebaseConfig = {
   // Initialize Firebase
 const app = firebase.initializeApp(FirebaseConfig);
 const config = Rebase.createClass(app.database()) //Inicia o Rebase com o "app.database()"
+
+export const storage = app.storage()
 
 export default config
