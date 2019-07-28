@@ -17,6 +17,16 @@ class AdminPortfolio extends Component {
         console.log(this.descricao.value)
         console.log(this.imagem.value)
 
+        const arquivo = this.imagem.files[0]
+        const {name, size, type} = arquivo
+        console.log(name, size, type)
+        
+        const ref = storage.ref(name)
+        ref.put(arquivo)
+        .then(img => {
+            console.log(img.metadata)
+        })
+
         e.preventDefault() // Bloqueia o refresh da página depois de clicar no botão submit (Botão salvar)
     }
 
