@@ -12,19 +12,23 @@ class AdminPortfolio extends Component {
     }
 
     gravaPortfolio(e){
-        console.log('Vamos gravar o portfolio aí mano?!')
-        console.log(this.titulo.value)
-        console.log(this.descricao.value)
-        console.log(this.imagem.value)
-
         const arquivo = this.imagem.files[0]
         const {name, size, type} = arquivo
-        console.log(name, size, type)
-        
+                
         const ref = storage.ref(name)
         ref.put(arquivo)
         .then(img => {
-            console.log(img.metadata)
+            img.ref.getDownloadURL()
+                .then(downloadURL => {                    
+                    const novoPortfolio = {
+                        titulo: this.titulo.value,
+                        descricao: this.descricao.value,
+                        imagem: downloadURL
+                    }
+                    config.push('portfolio', {
+                        data: novoPortfolio
+                    })
+                })
         })
 
         e.preventDefault() // Bloqueia o refresh da página depois de clicar no botão submit (Botão salvar)
