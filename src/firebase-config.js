@@ -17,5 +17,6 @@ const app = firebase.initializeApp(FirebaseConfig);
 const config = Rebase.createClass(app.database()) //Inicia o Rebase com o "app.database()"
 
 export const storage = app.storage()
+export const auth = app.auth()
 
 export default config
