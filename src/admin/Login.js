@@ -10,6 +10,10 @@ class Login extends Component {
         this.autenticaUsuario = this.autenticaUsuario.bind(this)
     }
 
+    autenticaUsuario(){
+        console.log(this.email.value, this.senha.value)
+    }
+
 
     render() {
         return (
